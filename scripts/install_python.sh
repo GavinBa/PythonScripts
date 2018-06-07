@@ -11,3 +11,10 @@ install_packages()
   touch debug.txt
 }
 
+install_modules()
+{
+  display_alert "Installing Flask" "" ""
+  pip install flask
+  pip3_install flask
+  display_alert "Flask installed" "" "info"
+}
