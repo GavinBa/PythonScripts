@@ -9,12 +9,16 @@ install_packages()
   apt-get -y install python-dev python3-dev
   apt-get -y install virtualenv  
   touch debug.txt
+  #TODO - setup pip and pip3 upgrades here - via bootstrap and get-pip.py
 }
 
 install_modules()
 {
+  display_alert "Setting up Setuptools and Wheel" "" ""
+  python -m pip install --upgrade pip setuptools wheel
+  
   display_alert "Installing Flask" "" ""
   pip install flask
   pip3_install flask
-  display_alert "Flask installed" "" "info"
+
 }
