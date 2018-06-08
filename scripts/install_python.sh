@@ -9,17 +9,18 @@ install_packages()
   apt-get -y install python-dev python3-dev
   apt-get -y install virtualenv  
   touch debug.txt
-  pip install --upgrade pip
-  pip3 install --upgrade pip
-}
+}  
 
 install_modules()
 {
-  display_alert "Setting up Setuptools and Wheel" "" ""
+  display_alert "Installing modules" "" ""
   python -m pip install --upgrade pip setuptools wheel
+  python3 -m pip install --upgrade pip3 setuptools wheel
   
-  display_alert "Installing Flask" "" ""
-  pip install flask
-  pip3_install flask
+  pip install --upgrade flask
+  pip3 install --upgrade flask
+  
+  pip install --upgrade beautifulsoup4
+  pip3 install --upgrade beautifulsoup4
 
 }
