@@ -18,7 +18,7 @@ if [ ! -d "${build_dir}" ]; then
 fi
 cd ${build_dir}
 
-install_packages
+#install_packages
 install_modules
 
 cd ${src_dir}
