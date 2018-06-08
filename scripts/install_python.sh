@@ -9,7 +9,8 @@ install_packages()
   apt-get -y install python-dev python3-dev
   apt-get -y install virtualenv  
   touch debug.txt
-  #TODO - setup pip and pip3 upgrades here - via bootstrap and get-pip.py
+  pip install --upgrade pip
+  pip3 install --upgrade pip
 }
 
 install_modules()
